@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Branch Management</title>
+    <link rel="stylesheet" th:href="@{/menu.css}"/>
+</head>
+<body>
+<div class="container">
+    <h1>Branch Management</h1>
+    <nav>
+        <ul>
+            <li><a th:href="@{view/branch/add}">Add New Branch</a></li>
+            <li><a th:href="@{view/branch/getAll}">View Branch List</a></li>
+            <li><a th:href="@{view/branch/update}">Update Branch</a></li>
+            <li><a th:href="@{view/branch/delete}">Delete Branch</a></li>
+        </ul>
+    </nav>
+    <section>
+        <p>Welcome to the Branch Management </p>
+    </section>
+</div>
+</body>
+</html>

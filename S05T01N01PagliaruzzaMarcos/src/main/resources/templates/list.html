@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Sucursales</title>
+    <link rel="stylesheet" th:href="@{/list.css}"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Branch List</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th class="id">ID</th>
+            <th class="name">Name</th>
+            <th class="country">Country</th>
+            <th class="type">Type</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="branch : ${branches}">
+            <td th:text="${branch.pk_BranchId}">ID</td>
+            <td th:text="${branch.nameBranch}">Name</td>
+            <td th:text="${branch.countryBranch}">Country</td>
+            <td th:text="${branch.typeBranch}">Type</td>
+        </tr>
+        </tbody>
+    </table>
+    <a th:href="@{/}" class="return-icon" title="Return to Home">
+        <i class="material-icons">arrow_back</i>
+    </a>
+</div>
+</body>
+</html>
